@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Navbar from "./Components/Navbar"
 import NewsRoom from "./Components/NewsRoom"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
 // Main File.
@@ -10,6 +11,7 @@ const App = () => {
     <div>
       <Navbar setCategory={setCategory} category={category}/>
       <NewsRoom category={category} />
+      <SpeedInsights/>
     </div>
   )
 }
