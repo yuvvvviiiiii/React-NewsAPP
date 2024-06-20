@@ -16,7 +16,14 @@ const NewsRoom = ({category}) => {
     } else{
     let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&page=${currentPage}&pageSize=${articlesPerPage}&apiKey=9b95865e97084c5aa3627a69a0457846`;
     // fetching data using newsapi.
-    fetch(url)
+
+    const options = {
+      headers: {
+        'upgrade' : 'HTTP/2.0'
+      }
+    };
+
+    fetch(url, options)
       .then(response => response.json())
       .then(data => {
         if (data.articles) {
