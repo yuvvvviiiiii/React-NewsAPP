@@ -14,6 +14,7 @@ const NewsRoom = ({ category }) => {
         let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&page=${currentPage}&pageSize=${articlesPerPage}&apiKey=9b95865e97084c5aa3627a69a0457846`;
 
         const response = await fetch(url);
+        console.log(response);  
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
