@@ -3,12 +3,12 @@ import Navbar from "./Components/Navbar"
 import NewsRoom from "./Components/NewsRoom"
 
 const App = () => {
-
-  const [category, setCategory] = useState("general");
+// Main File.
+  const [category, setCategory] = useState([]);
   
   return (
     <div>
-      <Navbar setCategory={setCategory} />
+      <Navbar setCategory={setCategory} category={category}/>
       <NewsRoom category={category} />
     </div>
   )
