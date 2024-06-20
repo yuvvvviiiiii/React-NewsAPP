@@ -45,7 +45,7 @@ const NewsItems = ({ title, description, src, url }) => {
         </p>
         <a href={url} className="btn btn-warning"> Read More </a>
         <button className="btn btn-info mx-2" onClick={saveArticle} disabled={isSaved}>
-          {isSaved ? "Saved" : "Save"}
+          {isSaved ? "Added to favourites" : "Add to favourites"}
         </button>
       </div>
     </div>

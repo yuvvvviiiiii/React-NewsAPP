@@ -46,7 +46,7 @@ const Navbar = ({setCategory}, {category}) => {
 
               <li className="nav-item">
                 <a className="nav-link active" type="submit" onClick={navigateToSaved}>
-                Saved Articles
+                <span className="text-danger">Favourites</span>
               </a>
               </li>
               
